@@ -7,7 +7,7 @@ const {ApiElasticSearchClient} = require('./server.elasticsearch');
 const madeExecutableSchema = require('./server.graphql');
 
 // PORT
-//const PORT = 9100;
+const PORT = process.env.PORT || 3001;
 
 let apolloServer = null;
 
@@ -40,7 +40,7 @@ const server = new ApolloServer({
 app.use(bodyParser.json());
 
 // TODO Set port for the app to listen on
-app.set('port', process.env.PORT || 3001);
+app.set('port', PORT);
 
 // TODO Set path to serve static files
 app.use(express.static(path.join(__dirname, 'public')));
