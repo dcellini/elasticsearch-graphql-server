@@ -17,10 +17,12 @@ _.map(_.keys(PRODUCTS), uuid => {
   ];
 });
 
-client.bulk({body: collectionBulk}, function (err, r) {
-  if (err) {
-    console.log(`Failed Bulk operation\n`, err);
-  } else {
-    console.log(`🚀 Successfully imported ${_.keys(PRODUCTS).length} items \n`);
-  }
-});
+console.log(collectionBulk);
+
+// client.bulk({body: collectionBulk}, function (err, r) {
+//   if (err) {
+//     console.log(`Failed Bulk operation\n`, err);
+//   } else {
+//     console.log(`🚀 Successfully imported ${_.keys(PRODUCTS).length} items \n`);
+//   }
+// });
