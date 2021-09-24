@@ -7,7 +7,7 @@ const {ApiElasticSearchClient} = require('./server.elasticsearch');
 const madeExecutableSchema = require('./server.graphql');
 
 // PORT
-const PORT = 9100;
+//const PORT = 9100;
 
 let apolloServer = null;
 
