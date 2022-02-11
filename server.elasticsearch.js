@@ -2,7 +2,7 @@ const client = require('./server.client');
 const elasticSearchSchema = require('./server.es.schema');
 
 /**
- * TODO Ping the CLIENT to be sure 
+ * Ping the CLIENT as specified in server.client.js to be sure 
  * *** ElasticSearch *** is up
  */
 client.ping({
@@ -13,10 +13,12 @@ client.ping({
     : console.log('ElasticSearch is ok');
 });
 
-function ElasticSearchClient(body) {
+// The ApiElasticSearchClient function below calls this and passes in the elasticsearch schema
+function ElasticSearchClient(elasticSearchSchema) {
   // perform the actual search passing in the index, the search query and the type
-  return client.search({index: 'catalog', body: body});
+  return client.search({index: 'catalog', body: elasticSearchSchema});
 }
+
 
 function ApiElasticSearchClient(req, res) {
   // perform the actual search passing in the index, the search query and the type
