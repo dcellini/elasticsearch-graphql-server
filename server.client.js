@@ -6,7 +6,7 @@ const ElasticSearch = require('elasticsearch');
  */
 
 const client = new ElasticSearch.Client({
-  host: 'https://c3s7fzosyt:7oz4htt742@elasticsearch-books-636535958.eu-west-1.bonsaisearch.net:443',
+  host: 'https://fdnurlxtj2:l65d9equvz@elasticsearch-books-5283871059.us-east-1.bonsaisearch.net:443',
   log: 'trace'
 });
 
