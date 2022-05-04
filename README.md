@@ -12,4 +12,6 @@ node server.es.create.js
 node server.es.bulk.js
 ... to add the documents
 
-Push the new changes to heroku
+Push the new changes to heroku using the following commands
+heroku login git 
+push heroku HEAD:master
